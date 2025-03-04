@@ -1,12 +1,20 @@
-<html>
-  <head></head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VISUALIA</title>
+    <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
+  </head>
   <body>
-    <iframe
-      src="https://jonasjohansson.notion.site/a1a4d0486c8244d7bbfddd7f2db296dc"
-      width="100%"
-      height="600"
-      frameborder="0"
-      allowfullscreen
-    />
-  </body>
+    <div id="adobe-dc-view"></div>
+    <script>
+      document.addEventListener("adobe_dc_view_sdk.ready", function() {
+        var adobeDCView = new AdobeDC.View({ clientId: "b3002fcfe1574a9688a0d32adaeb507d", divId: "adobe-dc-view" });
+        adobeDCView.previewFile({
+          content: { location: { url: "VISUALIA PRESENTATION.pdf" } },
+          metaData: { fileName: "VISUALIA PRESENTATION.pdf" }
+        }, { embedMode: "IN_LINE" });
+      });
+    </script>
 </html>
