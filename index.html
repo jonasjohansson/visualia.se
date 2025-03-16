@@ -4,17 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VISUALIA</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Visualia" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
     <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
   </head>
   <body>
     <div id="adobe-dc-view"></div>
     <script>
-      document.addEventListener("adobe_dc_view_sdk.ready", function() {
-        var adobeDCView = new AdobeDC.View({ clientId: "27d368bcd7f84626b444f3221233aef4", divId: "adobe-dc-view" });
-        adobeDCView.previewFile({
-          content: { location: { url: "VISUALIA PRESENTATION.pdf" } },
-          metaData: { fileName: "VISUALIA PRESENTATION.pdf" }
-        }, { embedMode: "IN_LINE" });
+      document.addEventListener("adobe_dc_view_sdk.ready", function () {
+        var adobeDCView = new AdobeDC.View({
+          clientId: "27d368bcd7f84626b444f3221233aef4",
+          divId: "adobe-dc-view",
+        });
+        adobeDCView.previewFile(
+          {
+            content: { location: { url: "VISUALIA PRESENTATION.pdf" } },
+            metaData: { fileName: "VISUALIA PRESENTATION.pdf" },
+          },
+          { embedMode: "IN_LINE" }
+        );
       });
     </script>
+  </body>
 </html>
