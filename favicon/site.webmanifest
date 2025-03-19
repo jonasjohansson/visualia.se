@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Visualia",
+  "short_name": "Visualia",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",
